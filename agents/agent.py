@@ -52,7 +52,8 @@ environment = Environment()
 # * Tool Registration
 @action_registry.register_tool(
     tool_name="implement_next_move",
-    description="Implement your next move of the tic-tac-toe game. You need to provide the row and column index of the cell you want to mark. The row and column index should be between 0 and 2.",)
+    description="Implement your next move of the tic-tac-toe game. You need to provide the row and column index of the cell you want to mark. The row and column index should be between 0 and 2.",
+    terminal=True)
 def ai_move(action_context, row: int, col: int):
     game = action_context.get("game")
     winner = game.make_move(row, col, 2)
