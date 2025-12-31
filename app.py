@@ -12,7 +12,16 @@ from ai_player import AI_PLAYER_MOVE
 
 
 
-
+st.set_page_config(page_title = "Everlasting Tic-Tac-Toe", 
+                   page_icon = ":material/chess_king:", 
+                   layout="centered", 
+                   initial_sidebar_state = "auto", 
+                   menu_items={
+        'Get Help': None,
+        'Report a bug': "mailto:huang0jin@gmail.com",
+        'About': """
+- Developed by - **[Wally, Huang Lin Chun](https://antique-turn-ad4.notion.site/Wally-Huang-Lin-Chun-182965318fa7804c86bdde557fa376f4)**"""
+    })
 
 with open("style.css", "r") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
