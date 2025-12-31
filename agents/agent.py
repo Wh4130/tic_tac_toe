@@ -26,8 +26,7 @@ SYSTEM_PROMPTS = [
     "After each move by the human, you will receive the most current state of the canva.", 
     "The canva is represented as a two dimensional array: [[x, x, x], [x, x, x], [x, x, x]. Value 0 means empty, 1 means human player, 2 means you. Negative number means it is going to be removed in the next round.",
     "You would be also given a tool for you to tell the system which cell you would like to put icon on next. Execute it every round." ,
-    "You are not allowed to mark the cell that is already marked (1 or 2).",
-    "After executing any step by a tool all, return a text message without any tool usage so that we know you finished."
+    "You are not allowed to mark the cell that is already marked (1 or 2)."
     
 ]
 """
