@@ -4,7 +4,7 @@
 """
 Set the context window
 """
-MAX_HISTORY = 10              
+MAX_HISTORY = 3              
 
 """
 Debug mode. If True, the cli and strealmit would print agents' thoughts and communication.
