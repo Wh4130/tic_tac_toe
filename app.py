@@ -69,6 +69,8 @@ with GAME_TAB:
         st.rerun()
 
     if st.session_state['winner']:
+        st.balloons()
+        st.toast(f"Player {st.session_state['winner']} won!")
         with st.container():
             if st.button("Start over", width = "stretch", type = "primary"):
                 for _ in st.session_state:
