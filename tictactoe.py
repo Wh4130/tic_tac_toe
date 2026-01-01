@@ -61,11 +61,12 @@ class TicTacToe_GAME:
         
         if len(st.session_state['game_history'][player]) > 3:
             st.session_state['game_state'][st.session_state['game_history'][player][0]] = 0
+            st.session_state['disabled'][st.session_state['game_history'][player][0]] = False
             st.session_state['game_history'][player].pop(0)
 
         if len(st.session_state['game_history'][player]) == 3:
             st.session_state['game_state'][st.session_state['game_history'][player][0]] = -1 * player
-            st.session_state['disabled'][st.session_state['game_history'][player][0]] = False
+            
 
     def check_win(self):
         for i in range(3):
