@@ -104,8 +104,8 @@ def render_sidebar():
 
     """
     with st.sidebar:
-        st.header("Tic-Tac-Toe 圈圈叉叉")
-        st.caption("A Tic-Tac-Toe game with :blue[**disappearing cells**]. Whenever a player has moved three times, the oldest move will be removed. You could also play with AI player.")
+        st.header("4x4 Tic-Tac-Toe 圈圈叉叉")
+        st.caption("A Tic-Tac-Toe game with :blue[**disappearing cells**]. Whenever a player has moved four times, the oldest move will be removed after the next move. You could also play with AI player.")
         # st.logo("assets/icon.png", size = 'large')
 
         with st.container(border = True):

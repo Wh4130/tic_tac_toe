@@ -47,9 +47,9 @@
 
 /* Ensure columns are displayed correctly on mobile devices */
 [data-testid="stColumn"] {
-    width: calc(33.3333% - 1rem) !important;
-    flex: 1 1 calc(33.3333% - 1rem) !important;
-    min-width: calc(33% - 1rem) !important;
+    width: calc(25% - 1rem) !important;
+    flex: 1 1 calc(25% - 1rem) !important;
+    min-width: calc(25% - 1rem) !important;
 }
 
 /* Improve segmented control */

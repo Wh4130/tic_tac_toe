@@ -29,6 +29,15 @@ with open("style.css", "r") as f:
 
 st.title("Tic-Tac-Toe")
 
+with st.expander("Rules"):
+    st.markdown("""
+- Player 1 places blue mark, and player 2 places orange mark. Player 1 always goes first.
+- Each player puts a mark on the board for each move.
+- The first player who gets four marks in a row, column, or diagonal wins.
+- :red[When you have four marks on the board already, the oldest mark would be removed after the next move. The oldest mark would be of diamond shape].
+""")
+
+
 # * Session state initialization
 initialize_session_state()
 if "difficulty" not in st.session_state:
@@ -62,7 +71,7 @@ else:
 
 
 
-GAME_TAB, MEMORY_TAB = st.tabs(["Game", "Memory"])
+GAME_TAB, HISTORY_TAB, MEMORY_TAB = st.tabs(["Game","Game History",  "Memory"])
 
 
 # * Game board
@@ -78,14 +87,26 @@ with GAME_TAB:
         st.rerun()
 
     if st.session_state['winner']:
-        st.balloons()
-        st.toast(f"Player {st.session_state['winner']} won!")
         with st.container():
             if st.button("Start over", width = "stretch", type = "primary"):
                 for _ in st.session_state:
                     del st.session_state[_]
                 st.rerun()
+            
 
 with MEMORY_TAB:
     render_global_memory()
+
+with HISTORY_TAB:
+    if not st.session_state['winner']:
+        st.warning("The game is not ending yet!")
+    else:
+        st.header(":material/history_2: Game History")
+
+        @st.fragment
+        def HISTORY():
+            game.render_history()
+        HISTORY()
+
+
 

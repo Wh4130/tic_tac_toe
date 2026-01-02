@@ -14,7 +14,7 @@ def generate_response(prompt: Prompt):
     Call LLM and return message that contents both tool usage and chat content
     """
     response = completion(
-        model="cerebras/llama-3.3-70b",
+        model="cerebras/gpt-oss-120b",
         messages=prompt.messages,
         max_tokens=60000,
         tools=prompt.tools if prompt.tools else None # 確保沒有工具時傳 None
