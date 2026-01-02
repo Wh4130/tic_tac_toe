@@ -126,18 +126,13 @@ class TicTacToe_GAME:
         # disable the button
         self.disable_button(row, col)
 
-        # remove the oldest move (if the history move > 4)
-        self.remove_oldest_move(player)
-
-        # append to history
-        self.append_to_history((row, col))
+        
 
         # check win status
         self.check_win()
 
         if st.session_state['winner']:
             self.end_game()
-            return st.session_state['winner']
 
         else:
             # append player move history if game not ended
@@ -146,9 +141,11 @@ class TicTacToe_GAME:
             # change player
             st.session_state['current_player'] = 3 - player
 
-            
-        
-        
+        # remove the oldest move (if the history move > 4)
+        self.remove_oldest_move(player)
+
+        # append to history
+        self.append_to_history((row, col))
         
 
     def main(self):
