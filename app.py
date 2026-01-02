@@ -12,7 +12,7 @@ from ai_player import AI_PLAYER_MOVE
 
 
 
-st.set_page_config(page_title = "Everlasting Tic-Tac-Toe", 
+st.set_page_config(page_title = "Upgraded Tic-Tac-Toe", 
                    page_icon = ":material/chess_king:", 
                    layout="centered", 
                    initial_sidebar_state = "auto", 
